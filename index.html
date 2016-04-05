@@ -2,22 +2,11 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<header role="banner" id="banner">
+  <img src="images/logo.png" id="logotype" alt="Shakespeare By The Book logo">
+  <h1 class="audible">Shakespeare by the Book</h1>
+  <p class="subtitle">Four Centuries of <br/>Printing, Editing, and
+  Publishing</p>
+  <img src="images/will.png" id="will" alt="Shakespeare face line drawing">
+  <p class="subtitle">February 22&ndash;December 31, 2016</p>
+</header>
