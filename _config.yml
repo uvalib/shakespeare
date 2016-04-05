@@ -1,14 +1,21 @@
 # Site settings
-title: Shakespeare
+title: Shakespeare By The Book
 email: library@virginia.edu
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This exhibition marks the 400th anniversary of Shakespeare’s death by
+  celebrating how his works have come to life through innovations in print
+  technology, editorial practice, and graphic design. Books and printing
+  artifacts drawn from Special Collections’ eclectic holdings will explain
+  the technology of printed books in the 17th century, narrate the complex
+  editorial history of the plays, and survey the myriad forms Shakespeare’s
+  works have taken in print over the last two centuries. Visitors will see
+  both our oldest and most radically modern Shakespeare volumes, learn about
+  U.Va.’s special role in the history of Shakespeare scholarship, and
+  encounter more than 100 miniature volumes dedicated to the playwright and
+  his works.
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://shakespeare.lib.virginia.edu" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+library_url: "http://library.virginia.edu"
 
 # Build settings
 markdown: kramdown
