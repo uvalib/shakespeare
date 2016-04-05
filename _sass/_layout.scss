@@ -1,6 +1,14 @@
 /**
  * Site header
  */
+.top-bar {
+    width: 100%;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #A5275C;
+}
+
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -161,6 +169,14 @@
 /**
  * Page content
  */
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
 .page-content {
     padding: $spacing-unit 0;
 }
