@@ -1,0 +1,17 @@
+{
+  "name": "shakespeare",
+  "version": "1.0.0",
+  "description": "Library Shakespeare By The Book site is built and deployed from this repo",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uvalib/shakespeare.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uvalib/shakespeare/issues"
+  },
+  "homepage": "https://github.com/uvalib/shakespeare"
+}
