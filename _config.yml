@@ -20,3 +20,6 @@ contact_email: jmf6a@virginia.edu
 
 # Build settings
 markdown: kramdown
+
+sass:
+  style: compressed

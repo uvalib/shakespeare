@@ -2,8 +2,11 @@ body {
   font-family: $base-font-family;
   margin:0;
   padding:0;
-  background-color: #ede7da;
   max-width: 1440px;
+}
+
+strong {
+  font-weight: bold;
 }
 
 /**
@@ -26,6 +29,7 @@ body {
 .site-footer {
   width: 100%;
   background-image: url("/images/footer-bg.png");
+  opacity: 0.9;
   height: 398px;
   padding: 82px 40px 0px 40px;
   font-size: 18px;
@@ -33,41 +37,26 @@ body {
 
 .footer-heading {
   font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 20px;
 }
 
-.footer-col-wrapper {
+.footer-row {
   font-size: 18px;
   color: $white-color;
-//  margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
 
-.footer-col {
-  float: left;
-//  margin-bottom: $spacing-unit / 2;
-//  padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-//  width: -webkit-calc(36% - (#{$spacing-unit} / 2));
-//  width:         calc(36% - (#{$spacing-unit} / 2));
-  width: 34%;
-}
-
-.footer-col-2 {
-//  width: -webkit-calc(32% - (#{$spacing-unit} / 2));
-//  width:         calc(32% - (#{$spacing-unit} / 2));
-  width: 32%;
-}
-
-.footer-col-3 {
-//  width: -webkit-calc(32% - (#{$spacing-unit} / 2));
-//  width:         calc(32% - (#{$spacing-unit} / 2));
-  width: 32%;
+.footer-links {
+  line-height: 2;
 }
 
 .social-media {
-  text-align:center;
+  padding-top: 5px;
+}
+
+.social-media a {
+  padding-right: 12px;
 }
 
 .social-media i {
@@ -89,6 +78,10 @@ body {
 /**
  * Page content
  */
+.page-content {
+  width: 100%;
+  padding: 0px;
+}
 
 .right {
   float: right;
@@ -100,29 +93,20 @@ body {
 
 #banner,
 #main {
-  padding-left: 20px;
-  padding-right: 20px;
+//  padding-left: 180px;
+//  padding-right: 180px;
 }
 
 #banner {
   padding-top: 80px;
+  padding-bottom: 52px;
   min-height: 300px;
   margin-bottom: 80px;
-  background: url("images/border.png") top left repeat-x;
+  background-color: #ede7da;
 }
 
 #banner h1 {
   margin-top:0;
-}
-
-#banner h1,
-#banner .subtitle {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: rgb(160,40,90);
-  color: rgba(160,40,90, .9);
-  font-weight: bold;
-  font-size: 20px;
 }
 
 #banner img {
@@ -131,13 +115,104 @@ body {
   margin-right: auto;
 }
 
-.subtitle {
+#banner h1,
+#banner .subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(160,40,90);
+  color: rgba(160,40,90, .9);
+  font-size: 20px;
+  font-family: "AGaramondPro-Bold";
   text-align:center;
 }
 
-#logotype,
+#banner .date-title {
+  letter-spacing: 2px;
+  color: rgb(160,40,90);
+  color: rgba(160,40,90, .9);
+  font-size: 26px;
+  line-height: normal;
+  font-family: "AGaramondPro-Bold";
+  text-align:center;
+}
+
+#logotype {
+  margin-bottom: 30px;
+}
+
 #will {
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#exhibition-summary {
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+#exhibition-detail {
+  padding-top: 53px;
+  padding-bottom: 40px;
+}
+
+.exhibition-detail-text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#exhibit-cards div.col {
+//  padding: 25px;
+}
+
+.exhibit-link {
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  text-align:center;
+  height: 37px;
+  width:150px;
+  font-size: 13.5px;
+  padding: 5px 5px 5px 5px;
+  color: #000;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hours td {
+  padding-left: 0px;
+  padding-bottom: 0px;
+  vertical-align: top;
+}
+
+#first-folio-tour {
+  padding-top: 69px;
+}
+
+.first-folio-content {
+  background-color: #fff;
+  border: 1px solid;
+  border-radius: 2px;
+  margin: 0.5rem 0 1rem;
+  position: relative;
+  transition: box-shadow 0.25s ease 0s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #d1d1d1;
+}
+
+#first-folio-tour h2 {
+  font-size: 35px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+#first-folio-tour p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#first-folio-tour .dates {
+  font-size: 16px;
+  line-height: 1;
 }
 
 .audible {
@@ -177,16 +252,36 @@ a {
   }
 }
 
-
-
-@media screen and (min-width: 600px) {
-
-#main #details {
-  clear:both;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  float:none;
+/**
+ * Material Design overrides
+ */
+.card {
+  height: 389px;
+  width: 311px;
 }
 
+.card .card-action {
+  border-top: none;
+  padding: 12px;
+}
+
+.card-action {
+  vertical-align: bottom;
+}
+.card-title {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.card .card-content {
+  font-size: 16px;
+  line-height: 1.3;
+  padding: 12px;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  text-transform: none;
+  text-decoration: none;
+  color: #000;
+  margin-right: 0px;
 }
