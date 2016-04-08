@@ -173,7 +173,7 @@ strong {
   width:150px;
   font-size: 13.5px;
   padding: 5px 5px 5px 5px;
-  color: #000;
+  color: #fff;
   display: inline;
   margin-left: auto;
   margin-right: auto;
@@ -238,6 +238,13 @@ strong {
 }
 
 /**
+ * Form layout and adjustments to material design forms
+ */
+sup.required {
+  color: red;
+}
+
+/**
  * Links
  */
 a {
@@ -250,6 +257,19 @@ a {
 
   &:hover {
       color: $white-color;
+  }
+}
+
+.modal-footer a {
+  color: $black-color;
+  text-decoration: underline;
+
+  &:visited {
+      color: $black-color;
+  }
+
+  &:hover {
+    color: $black-color;
   }
 }
 
