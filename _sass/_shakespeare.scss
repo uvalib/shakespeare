@@ -1,8 +1,9 @@
 body {
   font-family: $base-font-family;
-  margin:0;
+  margin: 0 auto;
   padding:0;
   max-width: 1440px;
+  background-color: #fafafa;
 }
 
 strong {
@@ -271,6 +272,14 @@ a {
 .card-title {
   font-size: 24px;
   line-height: 1;
+}
+
+.card-image {
+  background-color: black;
+}
+
+.card-image img {
+  opacity: 0.8;
 }
 
 .card .card-content {
