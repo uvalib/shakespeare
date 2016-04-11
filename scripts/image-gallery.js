@@ -2,6 +2,7 @@
 $(document).ready(function (){
   $('#view-gallery').on('click', function() {
     $(this).lightGallery({
+      fullScreen: false,
       dynamic: true,
       dynamicEl: [{
         'src': '../images/gallery/01_SL_01.jpg',
@@ -10,7 +11,7 @@ $(document).ready(function (){
       }, {
         'src': '../images/gallery/02_UVALD_03.jpg',
         'thumb': '../images/gallery/02_UVALD_03.jpg',
-        'subHtml': "<div>&quot;Hang there my verse, in witness of my love&quot;—page from an elaborately illustrated edition of <em>As You Like It: a Pleasant Comedy newly embellished with sundry decorations by W. H. Low</em> (1900). Low was a celebrated interior design artist who had decorated New York’s Waldorf Astoria.<br/><em>Image: UVA Library Digital Production Group.</em></div>"
+              'subHtml': "<div>&quot;Hang there my verse, in witness of my love&quot;—page from an elaborately illustrated edition of <em>As You Like It: a Pleasant Comedy newly embellished with sundry decorations by W. H. Low</em> (1900). Low was a celebrated interior design artist who had decorated New York’s Waldorf Astoria.<br/><em>Image: UVA Library Digital Production Group.</em></div>"
       }, {
         'src': '../images/gallery/03_SL_42.jpg',
         'thumb': '../images/gallery/03_SL_42.jpg',
