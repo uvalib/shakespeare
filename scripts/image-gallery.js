@@ -6,15 +6,15 @@ $(document).ready(function (){
       dynamicEl: [{
         "src": '../images/gallery/01_SL_01.jpg',
         'thumb': '../images/gallery/01_SL_01.jpg',
-        'subHtml': '<p>Leather-bound miniature volume from an edition of The Merchant of Venice printed in the early 20th century to promote a chocolate company.<br/><em>Photo by Shane Lin.</em> </p>'
+        'subHtml': "<div>Leather-bound miniature volume from an edition of The Merchant of Venice printed in the early 20th century to promote a chocolate company.<br/><em>Photo by Shane Lin.</em> </div>"
       }, {
         'src': '../images/gallery/02_UVALD_03.jpg',
         'thumb': '../images/gallery/02_UVALD_03.jpg',
-        'subHtml': "<p>&quot;Hang there my verse, in witness of my love&quot;—page from an elaborately illustrated edition of <em>As You Like It: a Pleasant Comedy newly embellished with sundry decorations by W. H. Low</em> (1900). Low was a celebrated interior design artist who had decorated New York’s Waldorf Astoria.<br/><em>Image: UVA Library Digital Production Group.</em></p>"
+        'subHtml': "<div>&quot;Hang there my verse, in witness of my love&quot;—page from an elaborately illustrated edition of <em>As You Like It: a Pleasant Comedy newly embellished with sundry decorations by W. H. Low</em> (1900). Low was a celebrated interior design artist who had decorated New York’s Waldorf Astoria.<br/><em>Image: UVA Library Digital Production Group.</em></div>"
       }, {
         'src': '../images/gallery/03_SL_42.jpg',
         'thumb': '../images/gallery/03_SL_42.jpg',
-        'subHtml': "<p>Taped inside the back cover of poet Anne Spencer’s <em>The Complete Works of Shakespeare</em> (1951) are two syllabi for courses in Shakespeare.<br/><em>Photo by Shane Lin.</em></p>"
+        'subHtml': "<div>Taped inside the back cover of poet Anne Spencer’s <em>The Complete Works of Shakespeare</em> (1951) are two syllabi for courses in Shakespeare.<br/><em>Photo by Shane Lin.</em></div>"
       }, {
         'src': '../images/gallery/04_SL_35.jpg',
         'thumb': '../images/gallery/04_SL_35.jpg',
