@@ -190,7 +190,7 @@ layout: default
 </div>
 
 <!-- Requesting a tour form is modal that will appear when button clicked. -->
-<div id="request-tour-modal" class="modal">
+<div id="request-tour-modal" class="modal modal-fixed-footer">
   <div class="modal-content">
     <h4>Tour Request Form</h4>
     <p>Please complete the form below to request a guided tour.</p>
@@ -224,6 +224,7 @@ layout: default
         <label for="accomodations">Special Accomodations</label>
         <textarea id="accomodations"></textarea>
       </p>
+      <input type="submit" id="request-tour" value="Request Tour"/>
     </form>
   </div>
   <div class="modal-footer">
