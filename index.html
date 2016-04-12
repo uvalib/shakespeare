@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<header role="banner" id="banner">
+<header role="banner" class="banner">
   <div class="row">
     <div class="col s12">
-      <img src="images/logo.png" id="logotype" alt="Shakespeare By The Book logo">
+      <img src="images/logo.png" class="logotype" alt="Shakespeare By The Book logo">
       <h1 class="audible">Shakespeare by the Book</h1>
     </div>
   </div>
@@ -16,7 +16,7 @@ layout: default
   </div>
   <div class="row">
     <div class="col s12">
-      <img src="images/will.png" id="will" alt="Shakespeare profile line drawing">
+      <img src="images/will.png" class="will" alt="Shakespeare profile line drawing">
     </div>
   </div>
   <div class="row">
@@ -25,7 +25,7 @@ layout: default
     </div>
   </div>
   <div class="row">
-    <div id="exhibition-summary" class="col s10 offset-s1">
+    <div class="exhibition-summary col s10 offset-s1">
       The University of Virginia presents an exhibition to celebrate the vibrant,
       complex, and sometimes contentious history of bringing Shakespeare's works
       into print. From early editions, to contemporary artists' books, and from
@@ -88,7 +88,7 @@ layout: default
         </div>
         <div class="card-action">
           <div>
-            <div class="exhibit-link"><a class="modal-trigger" data-target="request-tour-modal" href="#request-tour-modal">Book Group Tour</a></div>
+            <div class="exhibit-link"><a class="modal-trigger" href="#js-request-tour-modal">Book Group Tour</a></div>
             <div class="exhibit-link"><a href="https://www.library.virginia.edu/services/special-collections-instruction-session/">Book UVA Class Tour</a></div>
           </div>
         </div>
@@ -114,7 +114,7 @@ layout: default
   </div>
 </div>
 
-<div id="exhibition-detail" class="row">
+<div class="exhibition-detail row">
   <div class="exhibition-detail-text col s12 m8 offset-m2">
     <p>
       "Shakespeare by the Book" was produced by the Harrison-Small Research
@@ -142,36 +142,13 @@ layout: default
   </div>
 </div>
 
-<div id="first-folio-tour" class="row">
-  <div class="first-folio-content">
-    <div class="col s12 m4 offset-m2">
-      <img alt="First Folio image of Will" src="images/first-folio-card.png" width="333px" height="274px">
-    </div>
-    <div class="first-folio-content left col s12 m4">
-      <h2>First Folio Tour Stop</h2>
-      <p class="dates">
-        <strong>Dates:</strong> Oct 1st &ndash; 26th, 2016
-      </p>
-      <p>
-        The UVA Library will be hosting the Folger Shakespeare Library's
-        First Folio tour. <em>First Folio! The Book That Gave Us Shakespeare</em>
-        is a national traveling exhibition to commemorate the 400th anniversary
-        in 2016 of Shakespeare's death. The First Folio contains 36 of
-        Shakespeare's plays, 18 of which were never printed before.
-      </p>
-      <div class="exhibit-link"><a href="http://www.folger.edu/first-folio-tour/">Learn More</a></div>
-    </div>
-  </div>
-</div>
-
-
 <div class="row first-folio-tour">
-  <div class="first-folio card col s12 m8 offset-m2">
+  <div class="card col s12 m8 offset-m2">
     <div class="card-image">
-      <img alt="First Folio image of Will" src="images/first-folio-card.png" width="333px" height="274px">
+      <img alt="First Folio image of Will" src="images/first-folio-card.png">
       <span class="card-title"></span>
     </div>
-    <div class="first-folio card-content">
+    <div class="right-content">
       <h2>First Folio Tour Stop</h2>
       <p class="dates">
         <strong>Dates:</strong> Oct 1st &ndash; 26th, 2016
@@ -191,30 +168,30 @@ layout: default
 </div>
 
 <!-- Requesting a tour form is modal that will appear when button clicked. -->
-<div id="request-tour-modal" class="modal modal-fixed-footer">
+<div id="js-request-tour-modal" class="modal modal-fixed-footer">
   <div class="modal-content">
     <h4>Tour Request Form</h4>
     <p>Please complete the form below to request a guided tour.</p>
     <p><sup class="required">*</sup> <label>Required Field</label></p>
     <form action="" method="post">
       <p>
-        <label for="name">Name <sup class="required">*</sup></label>
+        <label for="name" aria-label="Enter your name">Name <sup class="required">*</sup></label>
         <input type="text" id="name" placeholder="Enter your name" class="validate" required="" aria-required="true">
       </p>
       <p>
-        <label for="phone">Phone Number <sup class="required">*</sup></label>
+        <label for="phone" aria-label="Enter your contact number, e.g. 434-243-1776">Phone Number <sup class="required">*</sup></label>
         <input type="tel" id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" placeholder="Enter your contact number, e.g. 434-243-1776" class="validate" required="" aria-required="true">
       </p>
       <p>
-        <label for="email">Email Address</label>
+        <label for="email" aria-label="Please enter your email address to receive a confirmation">Email Address</label>
         <input type="email" id="email" placeholder="Please enter to receive an email confirmation" class="validate">
       </p>
       <p>
-        <label for="affiliation">Affiliation <sup class="required">*</sup></label>
+        <label for="affiliation" aria-label="School, institution, etc.">Affiliation <sup class="required">*</sup></label>
         <input type="text" id="affiliation" placeholder="School, institution, etc." class="validate" required="" aria-required="true">
       </p>
       <p>
-        <label for="group-size">Group Size <sup class="required">*</sup></label>
+        <label for="group-size" aria-label="Enter an approximate number of people">Group Size <sup class="required">*</sup></label>
         <input type="text" id="group-size" placeholder="Enter an approximate number of people" class="validate" required="" aria-required="true">
       </p>
       <p>
@@ -232,7 +209,7 @@ layout: default
     <a href="#!" class="modal-action modal-close btn-flat">Close</a>
   </div>
 </div>
-<div id="request-tour-modal-confirmation" class="modal modal-fixed-footer">
+<div id="js-request-tour-modal-confirmation" class="modal modal-fixed-footer">
   <div class="modal-content">
     <h4>Tour Request Form</h4>
     <p>
