@@ -48,13 +48,13 @@ $tourRequest = new tourReceipt();
 /* If hidden form field exists and is empty then not spam. */
 if (isset($_POST['specificrequest']) and ($_POST['specificrequest'] == '')) {
   /* Retrieve form content securely. */
-  $name = (isset($_POST['name']) ? htmlentities($_POST['name']) : '';
-  $phone = (isset($_POST['phone']) ? htmlentities($_POST['phone']) : '';
-  $email = (isset($_POST['email']) ? htmlentities($_POST['email']) : '';
-  $affiliation = (isset($_POST['affiliation']) ? htmlentities($_POST['affiliation']) : '';
-  $groupSize = (isset($_POST['groupsize']) ? htmlentities($_POST['groupsize']) : '';
-  $desiredTourDate = (isset($_POST['desiredtourdate']) ? htmlentities($_POST['desiredtourdate']) : '';
-  $specialAccommodations = (isset($_POST['specialaccommodations']) ? htmlentities($_POST['specialaccommodations']) : '';
+  $name = (isset($_POST['name'])) ? htmlentities($_POST['name']) : '';
+  $phone = (isset($_POST['phone'])) ? htmlentities($_POST['phone']) : '';
+  $email = (isset($_POST['email'])) ? htmlentities($_POST['email']) : '';
+  $affiliation = (isset($_POST['affiliation'])) ? htmlentities($_POST['affiliation']) : '';
+  $groupSize = (isset($_POST['groupsize'])) ? htmlentities($_POST['groupsize']) : '';
+  $desiredTourDate = (isset($_POST['desiredtourdate'])) ? htmlentities($_POST['desiredtourdate']) : '';
+  $specialAccommodations = (isset($_POST['specialaccommodations'])) ? htmlentities($_POST['specialaccommodations']) : '';
 
   /* Format email using form content. */
   $emailBody =  'Thank you for your request! A member of the Shakespeare ';
@@ -103,9 +103,12 @@ if (isset($_POST['specificrequest']) and ($_POST['specificrequest'] == '')) {
 }
 
 /* Send response back to indicate success/failure of form submission. */
-if ( $shakespeareCopySent ) {
+if ($shakespeareCopySent) {
   $tourRequest = new tourReceipt($shakespeareCopySent, '<p>Thank you for your request! A member of the Shakespeare Exhibition team will reply to you within 1-2 business days to confirm your tour.</p>');
 }
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: *");
 header("Content-type: application/json; charset=utf-8");
 echo json_encode($tourRequest);
 ?>
