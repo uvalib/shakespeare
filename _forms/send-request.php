@@ -58,15 +58,15 @@ if (isset($_POST['specificrequest']) and ($_POST['specificrequest'] == '')) {
 
   /* Format email using form content. */
   $emailBody =  'Thank you for your request! A member of the Shakespeare ';
-  $emailBody =. 'Exhibition team will reply to you within 1-2 business days ';
-  $emailBody =. "to confirm your tour.\n\n";
-  $emailBody =. "Name: $name\n";
-  $emailBody =. "Phone Number: $phone\n";
-  $emailBody =. "Email Address: $email\n";
-  $emailBody =. "Affiliation: $affiliation\n";
-  $emailBody =. "Group Size: $groupSize\n";
-  $emailBody =. "Desired Tour Date: $desiredTourDate\n";
-  $emailBody =. "Special Accommodations: $specialAccommodations\n";
+  $emailBody .= 'Exhibition team will reply to you within 1-2 business days ';
+  $emailBody .= "to confirm your tour.\n\n";
+  $emailBody .= "Name: $name\n";
+  $emailBody .= "Phone Number: $phone\n";
+  $emailBody .= "Email Address: $email\n";
+  $emailBody .= "Affiliation: $affiliation\n";
+  $emailBody .= "Group Size: $groupSize\n";
+  $emailBody .= "Desired Tour Date: $desiredTourDate\n";
+  $emailBody .= "Special Accommodations: $specialAccommodations\n";
 
   /* Send emails. */
   // Email sent to patron if address was specified.
