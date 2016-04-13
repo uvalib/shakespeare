@@ -17,6 +17,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://shakespeare.lib.virginia.edu" # the base hostname & protocol for your site
 library_url: "http://library.virginia.edu"
 contact_email: "jmf6a@virginia.edu,cl9eb@virginia.edu"
+tour_request_ajax_submission_url: "https://ammdev2.lib.virginia.edu/send-request.php"
 
 # Build settings
 markdown: kramdown

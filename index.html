@@ -171,51 +171,47 @@ layout: default
 <div id="js-request-tour-modal" class="modal modal-fixed-footer">
   <div class="modal-content">
     <h4>Tour Request Form</h4>
-    <p>Please complete the form below to request a guided tour.</p>
-    <p><sup class="required">*</sup> <label>Required Field</label></p>
-    <form action="" method="post">
-      <p>
-        <label for="name" aria-label="Enter your name">Name <sup class="required">*</sup></label>
-        <input type="text" id="name" placeholder="Enter your name" class="validate" required="" aria-required="true">
-      </p>
-      <p>
-        <label for="phone" aria-label="Enter your contact number, e.g. 434-243-1776">Phone Number <sup class="required">*</sup></label>
-        <input type="tel" id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" placeholder="Enter your contact number, e.g. 434-243-1776" class="validate" required="" aria-required="true">
-      </p>
-      <p>
-        <label for="email" aria-label="Please enter your email address to receive a confirmation">Email Address</label>
-        <input type="email" id="email" placeholder="Please enter to receive an email confirmation" class="validate">
-      </p>
-      <p>
-        <label for="affiliation" aria-label="School, institution, etc.">Affiliation <sup class="required">*</sup></label>
-        <input type="text" id="affiliation" placeholder="School, institution, etc." class="validate" required="" aria-required="true">
-      </p>
-      <p>
-        <label for="group-size" aria-label="Enter an approximate number of people">Group Size <sup class="required">*</sup></label>
-        <input type="text" id="group-size" placeholder="Enter an approximate number of people" class="validate" required="" aria-required="true">
-      </p>
-      <p>
-        <label>Desired Tour Date <sup class="required">*</sup></label>
-        <input type="date" class="datepicker" id="tour-date" class="validate" required="" aria-required="true">
-      </p>
-      <p>
-        <label for="accomodations">Special Accomodations</label>
-        <textarea id="accomodations"></textarea>
-      </p>
-      <input type="submit" id="send-request" value="Send Request">
-    </form>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close btn-flat">Close</a>
-  </div>
-</div>
-<div id="js-request-tour-modal-confirmation" class="modal modal-fixed-footer">
-  <div class="modal-content">
-    <h4>Tour Request Form</h4>
-    <p>
-      Thank you for your request! A member of the Shakespeare Exhibition team
-      will reply to you within 1-2 business days to confirm your tour.
-    </p>
+    <div class="request-tour-form">
+      <p>Please complete the form below to request a guided tour.</p>
+      <p><sup class="required">*</sup> <label>Required Field</label></p>
+      <form id="tour-request-info" name="tour-request-info">
+        <p>
+          <label for="name" aria-label="Enter your name">Name <sup class="required">*</sup></label>
+          <input type="text" id="name" placeholder="Enter your name" class="validate" required="" aria-required="true">
+        </p>
+        <p>
+          <label for="phone" aria-label="Enter your contact number, e.g. 434-243-1776">Phone Number <sup class="required">*</sup></label>
+          <input type="tel" id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" placeholder="Enter your contact number, e.g. 434-243-1776" class="validate" required="" aria-required="true">
+        </p>
+        <p>
+          <label for="email" aria-label="Please enter your email address to receive a confirmation">Email Address</label>
+          <input type="email" id="email" placeholder="Please enter to receive an email confirmation" class="validate">
+        </p>
+        <p>
+          <label for="affiliation" aria-label="School, institution, etc.">Affiliation <sup class="required">*</sup></label>
+          <input type="text" id="affiliation" placeholder="School, institution, etc." class="validate" required="" aria-required="true">
+        </p>
+        <p>
+          <label for="groupsize" aria-label="Enter an approximate number of people">Group Size <sup class="required">*</sup></label>
+          <input type="text" id="groupsize" placeholder="Enter an approximate number of people" class="validate" required="" aria-required="true">
+        </p>
+        <p>
+          <label>Desired Tour Date <sup class="required">*</sup></label>
+          <input type="date" id="desiredtourdate" class="datepicker validate" size="20" required="" aria-required="true">
+        </p>
+        <p>
+          <label for="specialaccommodations">Special Accommodations</label>
+          <textarea id="specialaccommodations"></textarea>
+        </p>
+        <p class="specific-request">
+          <label for="specificrequest">Please leave this blank</label>
+          <input type="text" id="specificrequest" class="specific-request" value="" autocomplete="off" />
+        </p>
+        <p class="right">
+          <input type="submit" id="send-request" class="send-request" value="Send Request" onclick="submitTourRequest();">
+        </p>
+      </form>
+    </div>
   </div>
   <div class="modal-footer">
     <a href="#!" class="modal-action modal-close btn-flat">Close</a>

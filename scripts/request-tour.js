@@ -1,3 +1,7 @@
+---
+# Form ajax submission variable gets populated via config file.
+---
+
 // Handles the request tour modal dialog
 $(document).ready(function(){
     $('.datepicker').pickadate({
@@ -13,3 +17,28 @@ $(document).ready(function(){
     out_duration: 200
   });
 });
+
+function submitTourRequest() {
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var affiliation = document.getElementById("affiliation").value;
+  var groupsize = document.getElementById("groupsize").value;
+  var desiredtourdate = document.getElementById("desiredtourdate").value;
+  var specialaccommodations = document.getElementById("specialaccommodations").value;
+  var specificrequest = document.getElementById("specificrequest").value;
+  var dataString = 'name=' + name + '&phone=' + phone + '&email=' + email +
+    '&affiliation=' + affiliation + '&groupsize=' + groupsize +
+    '&desiredtourdate=' + desiredtourdate +
+    '&specialaccommodations=' + specialaccommodations +
+    '&specificrequest=' + specificrequest;
+  $.ajax({
+    type: "POST",
+    url: "{{site.tour_request_ajax_submission_url}}",
+    data: dataString,
+    dataType: 'json',
+    success: function(data) {
+      $('.request-tour-form').replaceWith(data.confirmationMsg);
+    }
+  });
+}
