@@ -22,7 +22,6 @@ $(document).ready(function(){
     var tourRequestForm = $('#tour-request-form');
     if (! tourRequestForm[0].checkValidity()) {
       $('<input type="submit">').hide().appendTo(tourRequestForm).click().remove();
-      tourRequestForm.find(':submit').click();
     } else {
       var name = document.getElementById("name").value;
       var phone = document.getElementById("phone").value;
