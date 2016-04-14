@@ -172,9 +172,9 @@ layout: default
   <div class="modal-content">
     <h4>Tour Request Form</h4>
     <div class="request-tour-form">
-      <p>Please complete the form below to request a guided tour.</p>
-      <p><sup class="required">*</sup> <label>Required Field</label></p>
-      <form id="tour-request-info" name="tour-request-info">
+      <form id="tour-request-form" name="tour-request-info">
+        <p>Please complete the form below to request a guided tour.</p>
+        <p><sup class="required">*</sup> <label>Required Field</label></p>
         <p>
           <label for="name" aria-label="Enter your name">Name <sup class="required">*</sup></label>
           <input type="text" id="name" placeholder="Enter your name" class="validate" required="" aria-required="true">
@@ -208,9 +208,21 @@ layout: default
           <input type="text" id="specificrequest" class="specific-request" value="" autocomplete="off" />
         </p>
         <p class="right">
-          <input type="button" id="send-request" class="send-request" value="Send Request" onclick="submitTourRequest();">
+          <!--input type="button" id="send-request" class="send-request" value="Send Request" onclick="submitTourRequest();"-->
         </p>
       </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#js-request-tour-modal-confirmation" class="modal-action modal-close btn-flat modal-trigger send-request" onclick="submitTourRequest();">Send Request</a>
+    <a href="#!" class="modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+<div id="js-request-tour-modal-confirmation" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <h4>Tour Request Form</h4>
+    <div class="request-tour-form">
+      <p>TESTING</p>
     </div>
   </div>
   <div class="modal-footer">

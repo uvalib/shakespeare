@@ -313,8 +313,18 @@ a {
 }
 
 .modal-footer a {
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  text-align:center;
+  width:70px;
+  padding: 0px 5px 5px 5px;
+  font-size: 12px;
   color: $black-color;
-  text-decoration: underline;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  text-transform: none;
 
   &:visited {
       color: $black-color;
@@ -322,6 +332,29 @@ a {
 
   &:hover {
     color: $black-color;
+  }
+}
+
+.modal-footer a.send-request {
+  background-color: #A5275C;
+  border: 1px solid #A5275C;
+  border-radius: 2px;
+  text-align:center;
+  height: 37px;
+  width:150px;
+  font-size: 13.5px;
+  padding: 5px 5px 5px 5px;
+  color: $white-color;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+
+  &:visited {
+      color: $white-color;
+  }
+
+  &:hover {
+    color: $white-color;
   }
 }
 

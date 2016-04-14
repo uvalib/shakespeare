@@ -1,0 +1,38 @@
+# Site settings
+destination: ./_site_prod
+title: Shakespeare By The Book
+email: library@virginia.edu
+description: > # this means to ignore newlines until "baseurl:"
+  This exhibition marks the 400th anniversary of Shakespeare’s death by
+  celebrating how his works have come to life through innovations in print
+  technology, editorial practice, and graphic design. Books and printing
+  artifacts drawn from Special Collections’ eclectic holdings will explain
+  the technology of printed books in the 17th century, narrate the complex
+  editorial history of the plays, and survey the myriad forms Shakespeare’s
+  works have taken in print over the last two centuries. Visitors will see
+  both our oldest and most radically modern Shakespeare volumes, learn about
+  U.Va.’s special role in the history of Shakespeare scholarship, and
+  encounter more than 100 miniature volumes dedicated to the playwright and
+  his works.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://shakespeare.lib.virginia.edu" # the base hostname & protocol for your site
+library_url: "http://library.virginia.edu"
+contact_email: "jmf6a@virginia.edu,cl9eb@virginia.edu"
+
+# Form settings
+tour_request_ajax_submission_url: "https://ammdev2.lib.virginia.edu/shakespeare/send-request.php"
+smtp_server: "smtp.mail.virginia.edu"
+primary_spec_coll_name: "John Witherell"
+primary_spec_coll_email: "jmf6a@virginia.edu"
+secondary_spec_coll_name: "Carla Lee"
+secondary_spec_coll_email: "cl9eb@virginia.edu"
+patron_email_subject: "Shakespeare Tour Request"
+library_email_subject: "Shakespeare Tour Request Submitted"
+form_confirmation_message: "Thank you for your request! A member of the Shakespeare Exhibition team will reply to you within 1-2 business days to confirm your tour."
+email_confirmation_message: "Thank you for your request! A member of the Shakespeare Exhibition team will reply to you within 1-2 business days to confirm your tour."
+
+# Build settings
+markdown: kramdown
+
+sass:
+  style: compressed
