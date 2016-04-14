@@ -105,8 +105,8 @@ if ($shakespeareCopySent) {
   $tourRequest = new tourReceipt($shakespeareCopySent, "{{site.form_confirmation_message}}");
 }
 header("Access-Control-Allow-Origin: {{site.cors_origin_domain}}");
-header("Access-Control-Allow-Methods: GET HEAD POST");
-header("Access-Control-Allow-Headers: *");
+//header("Access-Control-Allow-Methods: GET HEAD POST");
+//header("Access-Control-Allow-Headers: *");
 //header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 header("Content-type: application/json; charset=utf-8");
 echo json_encode($tourRequest);
