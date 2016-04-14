@@ -42,7 +42,7 @@ class tourReceipt {
 	 */
 	private function initialize() {
 		$this->mailSent = false;
-		$this->confirmationMsg = '<p>There was a problem sending your request at this time. Please try again later.</p><p>Thank you.</p>';
+		$this->confirmationMsg = 'There was a problem sending your request at this time. Please try again later. Thank you.';
 	}
 }
 $tourRequest = new tourReceipt();
@@ -103,9 +103,9 @@ if (isset($_POST['specificrequest']) and ($_POST['specificrequest'] == '')) {
 
 /* Send response back to indicate success/failure of form submission. */
 if ($shakespeareCopySent) {
-  $tourRequest = new tourReceipt($shakespeareCopySent, "<p>{{site.form_confirmation_message}}</p>");
+  $tourRequest = new tourReceipt($shakespeareCopySent, "{{site.form_confirmation_message}}");
 }
-header("Access-Control-Allow-Origin: *.virginia.edu");
+header("Access-Control-Allow-Origin: {{site.cors_host}}");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: origin, x-requested-with, content-type");
 header("Content-type: application/json; charset=utf-8");

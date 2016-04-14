@@ -30,6 +30,7 @@ patron_email_subject: "Shakespeare Tour Request"
 library_email_subject: "Shakespeare Tour Request Submitted"
 form_confirmation_message: "Thank you for your request! A member of the Shakespeare Exhibition team will reply to you within 1-2 business days to confirm your tour."
 email_confirmation_message: "Thank you for your request! A member of the Shakespeare Exhibition team will reply to you within 1-2 business days to confirm your tour."
+cors_host: "127.0.0.1"
 
 # Build settings
 markdown: kramdown
