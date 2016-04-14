@@ -59,8 +59,7 @@ if (isset($_POST['specificrequest']) and ($_POST['specificrequest'] == '')) {
   $specialAccommodations = (isset($_POST['specialaccommodations'])) ? htmlentities($_POST['specialaccommodations']) : '';
 
   /* Format email using form content. */
-  $emailBody =  "{{site.email_confirmation_message}}\n\n";
-  $emailBody .= "Name: $name\n";
+  $emailBody = "Name: $name\n";
   $emailBody .= "Phone Number: $phone\n";
   $emailBody .= "Email Address: $email\n";
   $emailBody .= "Affiliation: $affiliation\n";
@@ -79,7 +78,7 @@ if (isset($_POST['specificrequest']) and ($_POST['specificrequest'] == '')) {
     $mail->AddReplyTo($secondarySpecCollEmail,$secondarySpecCollName);
     $mail->AddAddress($email,$name); // Indicate who gets the email.
     $mail->Subject = "{{site.patron_email_subject}}";
-    $mail->Body = $emailBody;
+    $mail->Body = "{{site.patron_email_confirmation_message}}\n\n" . $emailBody;
     $patronCopySent = $mail->Send();
   }
   // Email sent to Library.
@@ -97,7 +96,7 @@ if (isset($_POST['specificrequest']) and ($_POST['specificrequest'] == '')) {
   $mail->AddReplyTo($primarySpecCollEmail,$primarySpecCollName);
   $mail->AddReplyTo($secondarySpecCollEmail,$secondarySpecCollName);
   $mail->Subject = "{{site.library_email_subject}}";
-  $mail->Body = $emailBody;
+  $mail->Body = "{{site.library_email_confirmation_message}}\n\n" . $emailBody;
   $shakespeareCopySent = $mail->Send();
 }
 
@@ -105,7 +104,7 @@ if (isset($_POST['specificrequest']) and ($_POST['specificrequest'] == '')) {
 if ($shakespeareCopySent) {
   $tourRequest = new tourReceipt($shakespeareCopySent, "{{site.form_confirmation_message}}");
 }
-header("Access-Control-Allow-Origin: {{site.cors_host}}");
+header("Access-Control-Allow-Origin: {{site.cors_origin_domain}}");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: origin, x-requested-with, content-type");
 header("Content-type: application/json; charset=utf-8");
