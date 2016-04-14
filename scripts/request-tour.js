@@ -9,12 +9,32 @@ $(document).ready(function(){
     selectYears: 2 // Creates a dropdown of 15 years to control year
   });
 
-  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  // The "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
   $('.modal-trigger').leanModal({
     dismissible: true,
     opacity: .5,
     in_duration: 300,
     out_duration: 200
+  });
+
+  // Send Request button handles form content and updates confirmation message
+  // before displaying confirmation modal.
+  $('.modal-action .modal-close .send-request').click(function() {
+    $('#js-request-tour-modal-confirmation .request-tour-form p').replaceWith("Testing");
+    $('#js-request-tour-modal').closeModal();
+    $('#js-request-tour-modal-confirmation').openModal();
+  });
+
+  // Close button for tour form just closes window after clearing elements.
+  $('.modal-action .modal-close .close').click(function() {
+    $("#name").val("");
+    $("#phone").val("");
+    $("#email").val("");
+    $("#affiliation").val("");
+    $("#groupsize").val("");
+    $("#desiredtourdate").val("");
+    $("#specialaccommodations").val("");
+    $('#js-request-tour-modal').closeModal();
   });
 
   // When patron clicks send request modal button
@@ -57,8 +77,9 @@ $(document).ready(function(){
 });
 
 function submitTourRequest() {
-  if (! $('#tour-request-form')[0].checkValidity()) {
-    $('#tour-request-form').submit();
+  var $tourForm = $('#tour-request-form');
+  if (! $tourForm[0].checkValidity()) {
+    $tourForm.find(':submit').click();
   } else {
     var name = document.getElementById("name").value;
     var phone = document.getElementById("phone").value;

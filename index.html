@@ -172,7 +172,7 @@ layout: default
   <div class="modal-content">
     <h4>Tour Request Form</h4>
     <div class="request-tour-form">
-      <form id="tour-request-form" name="tour-request-info" onsubmit="submitTourRequest();">
+      <form id="tour-request-form" name="tour-request-info">
         <p>Please complete the form below to request a guided tour.</p>
         <p><sup class="required">*</sup> <label>Required Field</label></p>
         <p>
@@ -203,9 +203,10 @@ layout: default
           <label for="specialaccommodations">Special Accommodations</label>
           <textarea id="specialaccommodations"></textarea>
         </p>
-        <p class="specific-request">
+        <p class="admin-field">
           <label for="specificrequest">Please leave this blank</label>
-          <input type="text" id="specificrequest" class="specific-request" value="" autocomplete="off" />
+          <input type="text" id="specificrequest" value="" autocomplete="off">
+          <input type="submit" id="form-submit" value="">
         </p>
         <p class="right">
           <!--input type="button" id="send-request" class="send-request" value="Send Request" onclick="submitTourRequest();"-->
@@ -215,7 +216,7 @@ layout: default
   </div>
   <div class="modal-footer">
     <a href="#js-request-tour-modal-confirmation" class="modal-action modal-close btn-flat modal-trigger send-request" onclick="submitTourRequest();">Send Request</a>
-    <a href="#!" class="modal-action modal-close btn-flat">Close</a>
+    <a href="#!" class="modal-action modal-close btn-flat close">Close</a>
   </div>
 </div>
 <div id="js-request-tour-modal-confirmation" class="modal modal-fixed-footer">
