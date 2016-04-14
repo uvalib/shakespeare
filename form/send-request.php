@@ -106,7 +106,7 @@ if ($shakespeareCopySent) {
 }
 header("Access-Control-Allow-Origin: {{site.cors_origin_domain}}");
 header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: origin, x-requested-with, content-type");
+header("Access-Control-Allow-Headers: *");
 header("Content-type: application/json; charset=utf-8");
 echo json_encode($tourRequest);
 ?>
