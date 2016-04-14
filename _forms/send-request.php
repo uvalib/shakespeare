@@ -1,13 +1,21 @@
+---
+# Docent tour form submission script
+---
 <?
 /* Include PHPMailer and initialize variables. */
 require_once("PHPMailer/class.phpmailer.php");
 
-$smtpServer = 'smtp.mail.virginia.edu';
-$primarySpecCollName = 'John Witherell';
-$primarySpecCollEmail = 'jmf6a@virginia.edu';
-$secondarySpecCollName = 'Carla Lee';
-$secondarySpecCollEmail = 'cl9eb@virginia.edu';
-$emailSubject = 'Shakespeare Tour Request';
+$smtpServer = "{{site.smtp_server}}"; //'smtp.mail.virginia.edu';
+/*$primarySpecCollName = 'Jack Kelly'; //'John Witherell';
+$primarySpecCollEmail = 'jlk4p@virginia.edu'; //'jmf6a@virginia.edu';
+$secondarySpecCollName = 'John Kelly'; //'Carla Lee';
+$secondarySpecCollEmail = 'jkelly85@vt.edu'; //'cl9eb@virginia.edu';
+$emailSubject = 'Shakespeare Tour Request';*/
+$primarySpecCollName = "{{site.primary_spec_coll_name}}"; //'Jack Kelly'; //'John Witherell';
+$primarySpecCollEmail = "{{site.primary_spec_coll_email}}"; //'jlk4p@virginia.edu'; //'jmf6a@virginia.edu';
+$secondarySpecCollName = "{{site.secondary_spec_coll_name}}"; //'John Kelly'; //'Carla Lee';
+$secondarySpecCollEmail = "{{site.secondary_spec_coll_email}}"; //'jkelly85@vt.edu'; //'cl9eb@virginia.edu';
+//$emailSubject = //'Shakespeare Tour Request';
 
 class tourReceipt {
   public $mailSent;
@@ -78,7 +86,7 @@ if (isset($_POST['specificrequest']) and ($_POST['specificrequest'] == '')) {
     $mail->AddReplyTo($primarySpecCollEmail,$primarySpecCollName);
     $mail->AddReplyTo($secondarySpecCollEmail,$secondarySpecCollName);
     $mail->AddAddress($email,$name); // Indicate who gets the email.
-    $mail->Subject = $emailSubject;
+    $mail->Subject = "{{site.patron_email_subject}}"; //$emailSubject;
     $mail->Body = $emailBody;
     $patronCopySent = $mail->Send();
   }
@@ -96,8 +104,7 @@ if (isset($_POST['specificrequest']) and ($_POST['specificrequest'] == '')) {
   $mail->AddCC($secondarySpecCollEmail,$secondarySpecCollName);
   $mail->AddReplyTo($primarySpecCollEmail,$primarySpecCollName);
   $mail->AddReplyTo($secondarySpecCollEmail,$secondarySpecCollName);
-  $mail->AddAddress($email,$name); // Indicate who gets the email.
-  $mail->Subject = $emailSubject;
+  $mail->Subject = "{{site.library_email_subject}}"; //$emailSubject . ' Submitted';
   $mail->Body = $emailBody;
   $shakespeareCopySent = $mail->Send();
 }
@@ -106,9 +113,9 @@ if (isset($_POST['specificrequest']) and ($_POST['specificrequest'] == '')) {
 if ($shakespeareCopySent) {
   $tourRequest = new tourReceipt($shakespeareCopySent, '<p>Thank you for your request! A member of the Shakespeare Exhibition team will reply to you within 1-2 business days to confirm your tour.</p>');
 }
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: *.virginia.edu");
 header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: *");
+header("Access-Control-Allow-Headers: origin, x-requested-with, content-type");
 header("Content-type: application/json; charset=utf-8");
 echo json_encode($tourRequest);
 ?>
