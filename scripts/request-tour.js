@@ -53,18 +53,11 @@ function submitTourRequest() {
       '&specialaccommodations=' + specialaccommodations +
       '&specificrequest=' + specificrequest;
     $.ajax({
-      type: "POST",
       url: "{{site.tour_request_ajax_submission_url}}",
+      type: "POST",
       data: paramString,
       dataType: 'json',
       success: function(data) {
-        $("#name").val("");
-        $("#phone").val("");
-        $("#email").val("");
-        $("#affiliation").val("");
-        $("#groupsize").val("");
-        $("#desiredtourdate").val("");
-        $("#specialaccommodations").val("");
         $('#js-request-tour-modal-confirmation .request-tour-form p').replaceWith(data.confirmationMsg);
         $('#js-request-tour-modal').closeModal();
         $('#js-request-tour-modal-confirmation').openModal();

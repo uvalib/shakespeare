@@ -21,7 +21,7 @@ contact_email: "jkelly@virginia.edu"
 
 # Form settings
 tour_request_ajax_submission_url: "https://ammdev2.lib.virginia.edu/shakespeare/send-request.php"
-cors_origin_domain: "*.virginia.edu"
+cors_origin_domain: "*"
 smtp_server: "smtp.mail.virginia.edu"
 primary_spec_coll_name: "Jack Kelly"
 primary_spec_coll_email: "jlk4p@virginia.edu"
