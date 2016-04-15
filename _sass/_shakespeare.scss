@@ -211,46 +211,50 @@ strong {
 }
 
 .first-folio-tour .card {
-  height: 274px;
   padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 300px;
 }
 
-.first-folio-tour .card .card-image {
-  width: 40%;
-  float: left;
-  margin-right: 15px;
+.first-folio-tour .first-folio-tour-graphic {
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: auto;
 }
 
 .first-folio-tour .card .card-image img {
-  height: 274px;
+  min-height: 300px;
 }
 
-.first-folio-tour right-content {
-  width: 60%;
-  float: left;
+.first-folio-tour .card .card-content {
 }
 
 .first-folio-tour .card .card-action {
-  padding-top: 5px;
+  padding-top: 15px;
 }
 
-.first-folio-tour h2 {
+.first-folio-tour .card .card-content h2 {
   font-size: 35px;
   line-height: 1.2;
   font-weight: bold;
   margin-top: 15px;
   margin-bottom: 15px;
+  margin-left: 15px;
 }
 
-.first-folio-tour p {
+.first-folio-tour .card .card-content p {
   font-size: 14px;
   line-height: 1.4;
   margin-right: 15px;
+  margin-left: 15px;
 }
 
 .first-folio-tour .dates {
   font-size: 16px;
   line-height: 1;
+  padding-bottom: 1em;
 }
 
 .audible {
@@ -365,8 +369,9 @@ a {
 }
 
 .card .card-content {
-  height: 180px;
+  //height: 180px;
 }
+
 .card .card-action {
   border-top: none;
   padding: 12px;
@@ -405,5 +410,8 @@ a {
 @media (max-width: 600px) {
   .lg-sub-html {
     display: none;
+  }
+  .first-folio-tour-text {
+    height: 400px;
   }
 }
