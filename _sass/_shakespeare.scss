@@ -167,6 +167,7 @@ strong {
   margin-right: auto;
 }
 
+.hours th,
 .hours td {
   padding-left: 0px;
   padding-bottom: 0px;
@@ -256,6 +257,11 @@ strong {
 }
 
 // Form layout and adjustments to material design forms
+form label {
+  color: #000;
+  font-size: 0.9rem;
+}
+
 textarea {
   height: 5rem;
 }
