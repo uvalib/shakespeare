@@ -36,7 +36,7 @@ $(document).ready(function(){
     $('#js-request-tour-modal').closeModal();
   });
 
-  // Override default form submission for the tour request.
+  // Override default form submission for the tour request form.
   $('#tour-request-form').on('submit', function(evt) {
     evt.preventDefault();
     if ($('#tour-request-form')[0].checkValidity()) {
