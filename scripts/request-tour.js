@@ -35,41 +35,43 @@ $(document).ready(function(){
     $("#specialaccommodations").val("");
     $('#js-request-tour-modal').closeModal();
   });
-});
 
-function submitTourRequest() {
-  if ($('#tour-request-form')[0].checkValidity()) {
-    var name = document.getElementById("name").value;
-    var phone = document.getElementById("phone").value;
-    var email = document.getElementById("email").value;
-    var affiliation = document.getElementById("affiliation").value;
-    var groupsize = document.getElementById("groupsize").value;
-    var desiredtourdate = document.getElementById("desiredtourdate").value;
-    var specialaccommodations = document.getElementById("specialaccommodations").value;
-    var specificrequest = document.getElementById("specificrequest").value;
-    var paramString = 'name=' + name + '&phone=' + phone + '&email=' + email +
-      '&affiliation=' + affiliation + '&groupsize=' + groupsize +
-      '&desiredtourdate=' + desiredtourdate +
-      '&specialaccommodations=' + specialaccommodations +
-      '&specificrequest=' + specificrequest;
-    $.ajax({
-      url: "{{site.tour_request_ajax_submission_url}}",
-      type: "POST",
-      data: paramString,
-      dataType: 'json',
-      success: function(data) {
-//        $("#name").val("");
-//        $("#phone").val("");
-//        $("#email").val("");
-//        $("#affiliation").val("");
-//        $("#groupsize").val("");
-//        $("#desiredtourdate").val("");
-//        $("#specialaccommodations").val("");
-        // code above this causing issue?
-        $('#js-request-tour-modal-confirmation .request-tour-form p').replaceWith(data.confirmationMsg);
-        $('#js-request-tour-modal').closeModal();
-        $('#js-request-tour-modal-confirmation').openModal();
-      }
-    });
-  }
-}
+  // Override default form submission for the tour request.
+  $('#tour-request-form').on('submit', function(evt) {
+    evt.preventDefault();
+    if ($('#tour-request-form')[0].checkValidity()) {
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var email = document.getElementById("email").value;
+      var affiliation = document.getElementById("affiliation").value;
+      var groupsize = document.getElementById("groupsize").value;
+      var desiredtourdate = document.getElementById("desiredtourdate").value;
+      var specialaccommodations = document.getElementById("specialaccommodations").value;
+      var specificrequest = document.getElementById("specificrequest").value;
+      var paramString = 'name=' + name + '&phone=' + phone + '&email=' + email +
+        '&affiliation=' + affiliation + '&groupsize=' + groupsize +
+        '&desiredtourdate=' + desiredtourdate +
+        '&specialaccommodations=' + specialaccommodations +
+        '&specificrequest=' + specificrequest;
+      $.ajax({
+        url: "{{site.tour_request_ajax_submission_url}}",
+        type: "POST",
+        data: paramString,
+        dataType: 'json',
+        success: function(data) {
+          $("#name").val("");
+          $("#phone").val("");
+          $("#email").val("");
+          $("#affiliation").val("");
+          $("#groupsize").val("");
+          $("#desiredtourdate").val("");
+          $("#specialaccommodations").val("");
+          $('#js-request-tour-modal-confirmation .request-tour-form p').replaceWith(data.confirmationMsg);
+          $('#js-request-tour-modal').closeModal();
+          $('#js-request-tour-modal-confirmation').openModal();
+        }
+      });
+    }
+  });
+
+});
