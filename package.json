@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Library Shakespeare By The Book site is built and deployed from this repo",
   "scripts": {
+    "accessibility": "a11y http://0.0.0.0:4000/ > accessibility-issues.txt"
   },
   "repository": {
     "type": "git",
@@ -13,5 +14,9 @@
   "bugs": {
     "url": "https://github.com/uvalib/shakespeare/issues"
   },
-  "homepage": "https://github.com/uvalib/shakespeare"
+  "homepage": "https://github.com/uvalib/shakespeare",
+  "devDependencies": {
+    "a11y": "^0.4.0",
+    "html-proofer": "0.0.1"
+  }
 }
