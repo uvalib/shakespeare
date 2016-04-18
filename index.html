@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<header role="banner" class="banner">
+<header class="banner" role="banner">
   <div class="row">
     <div class="col s12">
-      <img src="images/logo.png" class="logotype" alt="Shakespeare By The Book logo">
+      <img class="logotype" src="images/logo.png" alt="Shakespeare By The Book logo">
       <h1 class="audible">Shakespeare by the Book</h1>
     </div>
   </div>
@@ -16,7 +16,7 @@ layout: default
   </div>
   <div class="row">
     <div class="col s12">
-      <img src="images/will.png" class="will" alt="Shakespeare profile line drawing">
+      <img class="will" src="images/will.png" alt="Shakespeare profile line drawing">
     </div>
   </div>
   <div class="row">
@@ -169,36 +169,36 @@ layout: default
 </div>
 
 <!-- Requesting a tour form is modal that will appear when button clicked. -->
-<div id="js-request-tour-modal" class="modal modal-fixed-footer">
+<div class="modal modal-fixed-footer" id="js-request-tour-modal">
   <div class="modal-content">
     <h4>Tour Request Form</h4>
     <div class="request-tour-form">
-      <form id="tour-request-form" name="tour-request-info">
+      <form id="tour-request-form" name="tour-request-form">
         <p>Please complete the form below to request a guided tour.</p>
         <p><sup class="required">*</sup> <label>Required Field</label></p>
         <p>
           <label for="name" aria-label="Enter your name">Name <sup class="required">*</sup></label>
-          <input type="text" id="name" placeholder="Enter your name" class="validate" required="" aria-required="true">
+          <input class="validate" id="name" type="text" placeholder="Enter your name" required="" aria-required="true">
         </p>
         <p>
           <label for="phone" aria-label="Enter your contact number, e.g. 434-243-1776">Phone Number <sup class="required">*</sup></label>
-          <input type="tel" id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" placeholder="Enter your contact number, e.g. 434-243-1776" class="validate" required="" aria-required="true">
+          <input class="validate" id="phone" type="tel" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" placeholder="Enter your contact number, e.g. 434-243-1776" required="" aria-required="true">
         </p>
         <p>
           <label for="email" aria-label="Please enter your email address to receive a confirmation">Email Address</label>
-          <input type="email" id="email" placeholder="Please enter to receive an email confirmation" class="validate">
+          <input class="validate" id="email" type="email" placeholder="Please enter to receive an email confirmation">
         </p>
         <p>
           <label for="affiliation" aria-label="School, institution, etc.">Affiliation <sup class="required">*</sup></label>
-          <input type="text" id="affiliation" placeholder="School, institution, etc." class="validate" required="" aria-required="true">
+          <input class="validate" id="affiliation" type="text" placeholder="School, institution, etc." required="" aria-required="true">
         </p>
         <p>
           <label for="groupsize" aria-label="Enter an approximate number of people">Group Size <sup class="required">*</sup></label>
-          <input type="text" id="groupsize" placeholder="Enter an approximate number of people" class="validate" required="" aria-required="true">
+          <input class="validate" id="groupsize" type="text" placeholder="Enter an approximate number of people" required="" aria-required="true">
         </p>
         <p>
           <label>Desired Tour Date <sup class="required">*</sup></label>
-          <input type="date" id="desiredtourdate" class="datepicker" size="20" required="" aria-required="true">
+          <input class="datepicker" id="desiredtourdate" type="date" size="20" required="" aria-required="true">
         </p>
         <p>
           <label for="specialaccommodations">Special Accommodations</label>
@@ -206,20 +206,20 @@ layout: default
         </p>
         <p class="admin-field">
           <label for="specificrequest">Please leave this blank</label>
-          <input type="text" id="specificrequest" value="" autocomplete="off">
+          <input id="specificrequest" type="text" value="" autocomplete="off">
         </p>
         <p class="right">
-          <input type="submit" id="send-request" class="send-request" value="Send Request" onclick="submitTourRequest();">
+          <input class="send-request" id="send-request" type="submit" value="Send Request" onclick="submitTourRequest();">
         </p>
       </form>
     </div>
   </div>
   <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close btn-flat">Close</a>
+    <a class="modal-action modal-close btn-flat" href="#!">Close</a>
   </div>
 </div>
 <!-- This appears when form submits and confirmation is returned -->
-<div id="js-request-tour-modal-confirmation" class="modal modal-fixed-footer">
+<div class="modal modal-fixed-footer" id="js-request-tour-modal-confirmation">
   <div class="modal-content">
     <h4>Tour Request Form</h4>
     <div class="request-tour-form">
@@ -227,6 +227,6 @@ layout: default
     </div>
   </div>
   <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close btn-flat">Close</a>
+    <a class="modal-action modal-close btn-flat" href="#!">Close</a>
   </div>
 </div>

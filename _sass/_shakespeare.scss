@@ -173,10 +173,6 @@ strong {
   vertical-align: top;
 }
 
-#first-folio-tour {
-  padding-top: 69px;
-}
-
 .first-folio-content {
   background-color: #fff;
   border: 1px solid;
@@ -186,22 +182,6 @@ strong {
   transition: box-shadow 0.25s ease 0s;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   color: #d1d1d1;
-}
-
-#first-folio-tour h2 {
-  font-size: 35px;
-  line-height: 1.2;
-  font-weight: bold;
-}
-
-#first-folio-tour p {
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-#first-folio-tour .dates {
-  font-size: 16px;
-  line-height: 1;
 }
 
 // First Folio tour card overrides
@@ -276,6 +256,10 @@ strong {
 }
 
 // Form layout and adjustments to material design forms
+textarea {
+  height: 5rem;
+}
+
 sup.required {
   color: red;
 }
@@ -298,6 +282,7 @@ sup.required {
   margin-right: auto;
 
 }
+
 // Image Gallery overrides
 .lg-sub-html, .lg-toolbar {
     background-color: rgba(0, 0, 0, 0.65);
