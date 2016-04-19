@@ -293,6 +293,39 @@ sup.required {
 
 }
 
+::-webkit-input-placeholder {
+   color: #545A5C;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #545A5C;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #545A5C;
+}
+
+:-ms-input-placeholder {
+   color: #545A5C;
+}
+
+input:not([type]),
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="time"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+textarea.materialize-textarea {
+  border-style: solid;
+  border-width: 1px;
+}
+
 // Image Gallery overrides
 .lg-sub-html, .lg-toolbar {
     background-color: rgba(0, 0, 0, 0.65);
