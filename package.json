@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Library Shakespeare By The Book site is built and deployed from this repo",
   "scripts": {
-    "accessibility": "a11y http://0.0.0.0:4000/ > _test_results/accessibility-issues.txt",
-    "check-html": "html-validator --file=_site/index.html --format=text > _test_results/html-check.txt"
+    "accessibility": "a11y http://0.0.0.0:4000/",
+    "check-html": "html-validator --file=_site/index.html --format=text"
   },
   "repository": {
     "type": "git",
