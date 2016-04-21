@@ -7,7 +7,7 @@ $(document).ready(function (){
       dynamicEl: [{
         'src': '../images/gallery/01_SL_01.jpg',
         'thumb': '../images/gallery/01_SL_01.jpg',
-        'subHtml': "<div>Leather-bound miniature volume from an edition of The Merchant of Venice printed in the early 20th century to promote a chocolate company.<br/><em>Photo by Shane Lin.</em> </div>"
+        'subHtml': "<div>Leather-bound miniature volume from an edition of <em>The Merchant of Venice</em> printed in the early 20th century to promote a chocolate company.<br/><em>Photo by Shane Lin.</em> </div>"
       }, {
         'src': '../images/gallery/02_UVALD_03.jpg',
         'thumb': '../images/gallery/02_UVALD_03.jpg',
@@ -35,7 +35,7 @@ $(document).ready(function (){
       }, {
         'src': '../images/gallery/08_SL_26.jpg',
         'thumb': '../images/gallery/08_SL_26.jpg',
-        'subHtml': "<div>Volume one of Jan Kellett’s <em>Storming Shakespeare</em> (2013) is an essay about storms in the plays. It opens in the center to a passage from The Tempest.<br/><em>Photo by Shane Lin.</em></div>"
+        'subHtml': "<div>Volume one of Jan Kellett’s <em>Storming Shakespeare</em> (2013) is an essay about storms in the plays. It opens in the center to a passage from <em>The Tempest</em>.<br/><em>Photo by Shane Lin.</em></div>"
       }, {
         'src': '../images/gallery/09_SL_47.jpg',
         'thumb': '../images/gallery/09_SL_47.jpg',
@@ -63,7 +63,7 @@ $(document).ready(function (){
       }, {
         'src': '../images/gallery/15_UVALD_07.jpg',
         'thumb': '../images/gallery/15_UVALD_07.jpg',
-        'subHtml': "<div>Directions by Janet Zweig from The 336 lines currently expurgated from Shakespeare’s <em>Romeo and Juliet</em> in ninth grade textbooks (1989) tell students how to put censored text back into the play.<br/><em>Image: UVA Library Digital Production Group.</em></div>"
+        'subHtml': "<div>Directions by Janet Zweig from <em>The 336 lines currently expurgated from Shakespeare’s Romeo and Juliet in ninth grade textbooks</em> (1989) tell students how to put censored text back into the play.<br/><em>Image: UVA Library Digital Production Group.</em></div>"
       }, {
         'src': '../images/gallery/16_SL_08.jpg',
         'thumb': '../images/gallery/16_SL_08.jpg',
@@ -75,7 +75,7 @@ $(document).ready(function (){
       }, {
         'src': '../images/gallery/18_UVALD_05.jpg',
         'thumb': '../images/gallery/18_UVALD_05.jpg',
-        'subHtml': "<div>Eighteenth century edition of Shakespeare owned by the prominent Coles family of Virginia, and read by Sarah Coles, probably in the eighteenth century, judging by the term &quot;Toadeater,&quot; inscribed on the title page, an early variant of &quot;toady.&quot;<br/><em>Image: UVA Library Digital Production Group.</em></div>"
+        'subHtml': "<div>Eighteenth century edition of Shakespeare owned by the prominent Coles family of Virginia, and read by Sarah Coles, probably in the eighteenth century, judging by the term &quot;Toadeater,&quot; an early variant of &quot;toady,&quot; inscribed on the title page.<br/><em>Image: UVA Library Digital Production Group.</em></div>"
       }, {
         'src': '../images/gallery/19_UVALD_01.jpg',
         'thumb': '../images/gallery/19_UVALD_01.jpg',
