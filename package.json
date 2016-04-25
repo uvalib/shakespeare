@@ -5,8 +5,12 @@
   "scripts": {
     "accessibility": "a11y http://0.0.0.0:4000/",
     "check-html": "html-validator --file=_site/index.html --format=text",
-    "dev-build": "jekyll build --config=_config.yml",
-    "prod-build": "jekyll build --config-_config_prod.yml"
+    "test-build": "jekyll build --config=_config_test.yml",
+    "remove-script-from-test": "rm -R _site_test/form",
+    "prod-build": "jekyll build --config-_config_prod.yml",
+    "remove-script-from-prod": "rm -R _site_prod/form",
+    "deploy-test": "rsync -avh --delete _site_test/ uxdev.lib.virginia.edu:/var/www/html/shakespeare",
+    "deploy-prod": "rsync -avh --delete _site_prod/ static01.lib.virginia.edu:/var/www/html/shakespeare",
   },
   "repository": {
     "type": "git",
