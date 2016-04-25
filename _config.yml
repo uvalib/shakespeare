@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
   U.Va.’s special role in the history of Shakespeare scholarship, and
   encounter more than 100 miniature volumes dedicated to the playwright and
   his works.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "shakespeare" # the subpath of your site, e.g. /blog/
 url: "http://shakespeare.lib.virginia.edu" # the base hostname & protocol for your site
 library_url: "http://library.virginia.edu"
 contact_email: "jmf6a@virginia.edu"
