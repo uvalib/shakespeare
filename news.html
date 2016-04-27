@@ -4,34 +4,38 @@ title: Shakespeare in the News
 ---
 
 {% for article in site.news %}
-  {% if article.title != "" %}
-    {% unless forloop.first %}
-    <div class="row">
-      <div class="col s12 m10 offset-m1">
-        <div class="divider"></div>
+  {% if article.title != nil %}
+    {% if article.title != "" %}
+      {% unless forloop.first %}
+      <div class="row">
+        <div class="col s12 m10 offset-m1">
+          <div class="divider"></div>
+        </div>
       </div>
-    </div>
-    {% endunless %}
+      {% endunless %}
 
-    <div class="row">
-      <div class="col s12 m10 offset-m1">
-        <article>
-          <header>
-            <h1><a href="{{article.link}}">{{article.title}}</a></h1>
-            {% if article.subtitle != "" or article.subtitle != null %}
-              <div class="article-subtitle">{{article.subtitle}}</div>
-            {% endif %}
-          </header>
-          <div class="article-copy">
-            {{article.copy}}
-          </div>
-          {% if article.published_date != "" or article.published_date != null %}
-            <div class="published">
-              Published on {{article.published_date}}
+      <div class="row">
+        <div class="col s12 m10 offset-m1">
+          <article>
+            <header>
+              <h1><a href="{{article.link}}">{{article.title}}</a></h1>
+              {% if article.subtitle != nil %}
+                {% if article.subtitle != "" %}
+                  <div class="article-subtitle">{{article.subtitle}}</div>
+                {% endif %}
+              {% endif %}
+            </header>
+            <div class="article-copy">
+              {{article.copy}}
             </div>
-          {% endif %}
-        </article>
+            {% if article.published_date != nil %}
+              {% if article.published_date != "" %}
+                <div class="published">Published on {{article.published_date}}</div>
+              {% endif %}
+            {% endif %}
+          </article>
+        </div>
       </div>
-    </div>
+    {% endif %}
   {% endif %}
 {% endfor %}
