@@ -391,6 +391,80 @@ a {
   }
 }
 
+.news-articles a {
+  color: $black-color;
+  text-decoration: underline;
+
+  &:visited {
+    color: $black-color;
+  }
+
+  &:hover {
+    color: $black-color;
+  }
+}
+
+.news-articles .published a {
+  color: $link-standard-color;
+  text-decoration: underline;
+
+  &:visited {
+    color: $link-visited-color;
+  }
+
+  &:hover {
+    color: $link-standard-color;
+  }
+}
+
+// News page/article formatting
+.news {
+  padding-top: 20px;
+}
+
+.news .subtitle {
+  letter-spacing: 2px;
+  color: rgb(160,40,90);
+  color: rgba(160,40,90, .9);
+  font-size: 24px;
+  font-weight: bold;
+//  font-family: "AGaramondPro-Bold";
+}
+
+.news .exhibit-link {
+  text-decoration: none;
+  color: $black-color;
+  padding: 10px;
+}
+
+.news .row .home-button {
+  padding-top: 20px;
+}
+
+.news .exhibit-link .fa {
+  color: #e0e0e0;
+}
+
+.news-articles h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1rem 0 .5rem;
+}
+
+.news-articles h1 a {
+  text-decoration: none;
+}
+
+.news-articles .article-subtitle {
+  font-size: 18px;
+  margin: 0 0 1rem;
+}
+
+.news-articles .published {
+  padding-top: 10px;
+  font-size: 12px;
+}
+
 // Material Design overrides
 .card {
   margin-left: auto;
