@@ -15,13 +15,13 @@ description: > # this means to ignore newlines until "baseurl:"
   encounter more than 100 miniature volumes dedicated to the playwright and
   his works.
 baseurl: "shakespeare" # the subpath of your site, e.g. /blog/
-url: "http://shakespeare.lib.virginia.edu" # the base hostname & protocol for your site
+url: "http://uxdev.lib.virginia.edu/shakespeare" # the base hostname & protocol for your site
 library_url: "http://library.virginia.edu"
 contact_email: "jmf6a@virginia.edu"
 
 # Form settings
 tour_request_ajax_submission_url: "https://webapptest.lib.virginia.edu/shakespeare/send-request.php"
-cors_origin_domain: "*.virginia.edu"
+cors_origin_domain: "*"
 smtp_server: "smtp.mail.virginia.edu"
 primary_spec_coll_name: "Jack Kelly"
 primary_spec_coll_email: "jlk4p@virginia.edu"
