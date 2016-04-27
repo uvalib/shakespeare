@@ -25,7 +25,7 @@ strong {
 // Site footer
 .site-footer {
   width: 100%;
-  background-image: url("/images/footer-bg.png");
+  background-image: url($footer-background-image);
   min-height: 398px;
   padding: 82px 40px 0px 40px;
   font-size: 18px;
