@@ -1,5 +1,5 @@
 ---
-title: "Article Title"
+title: "Article Title One"
 link: "http://dev.null"
 subtitle: "Article subtitle section goes here"
 copy: >
