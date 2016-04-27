@@ -38,3 +38,9 @@ markdown: kramdown
 
 sass:
   style: compressed
+
+collections:
+  news:
+    output: false
+
+exclude: [ ]

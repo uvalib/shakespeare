@@ -41,4 +41,6 @@ sass:
 
 collections:
   news:
-    output: true
+    output: false
+
+exclude: [ ]
