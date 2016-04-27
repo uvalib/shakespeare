@@ -1,4 +1,4 @@
-# Creating A New article
+# Creating A New Article
 
 ```
 ---
