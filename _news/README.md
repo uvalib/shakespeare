@@ -6,7 +6,7 @@ title: ""
 link: ""
 subtitle: ""
 copy: ""
-date: ""
+published-date: ""
 ---
 ```
 

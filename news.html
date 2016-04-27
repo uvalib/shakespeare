@@ -25,9 +25,11 @@ title: Shakespeare in the News
           <div class="article-copy">
             {{article.copy}}
           </div>
-          <div class="published">
-            Published on {{article.date}}
-          </div>
+          {% if article.published-date != "" %}
+            <div class="published">
+              Published on {{article.published-date}}
+            </div>
+          {% endif %}
         </article>
       </div>
     </div>
