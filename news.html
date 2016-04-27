@@ -18,7 +18,9 @@ title: Shakespeare in the News
         <article>
           <header>
             <h1><a href="{{article.link}}">{{article.title}}</a></h1>
-            <div class="article-subtitle">{{article.subtitle}}</div>
+            {% if article.subtitle != "" %}
+              <div class="article-subtitle">{{article.subtitle}}</div>
+            {% endif %}
           </header>
           <div class="article-copy">
             {{article.copy}}
