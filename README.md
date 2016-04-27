@@ -6,10 +6,10 @@ This is a static website replaces work Jeremy began for it.
 ## Communications Staff
 
 To add articles to the News page:
+
 1. Go to the _news folder
 2. View the README.md file and follow the directions in it.
-3. Let the UX team know when you want to have new articles added to the
-production site so that we can push a new build out to the server.
+3. Let the UX team know when you want to have new articles added to the production site so that we can push a new build out to the server.
 
 ## Developer Information
 
