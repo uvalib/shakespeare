@@ -18,16 +18,16 @@ title: Shakespeare in the News
         <article>
           <header>
             <h1><a href="{{article.link}}">{{article.title}}</a></h1>
-            {% if article.subtitle != "" %}
+            {% if article.subtitle != "" or article.subtitle != null %}
               <div class="article-subtitle">{{article.subtitle}}</div>
             {% endif %}
           </header>
           <div class="article-copy">
             {{article.copy}}
           </div>
-          {% if article.published-date != "" %}
+          {% if article.published_date != "" or article.published_date != null %}
             <div class="published">
-              Published on {{article.published-date}}
+              Published on {{article.published_date}}
             </div>
           {% endif %}
         </article>
