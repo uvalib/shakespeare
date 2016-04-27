@@ -1,33 +1,33 @@
 ---
 layout: news
-title: Shakespeare News
+title: Shakespeare in the News
 ---
 
 {% for article in site.news %}
-  {% unless forloop.first %}
-  <div class="row">
-    <div class="col s12 m10 offset-m1">
-      <div class="divider"></div>
+  {% if article.title != "" %}
+    {% unless forloop.first %}
+    <div class="row">
+      <div class="col s12 m10 offset-m1">
+        <div class="divider"></div>
+      </div>
     </div>
-  </div>
-  {% endunless %}
+    {% endunless %}
 
-  <div class="row">
-    <div class="col s12 m10 offset-m1">
-      <article>
-        <header>
-          <h1><a href="{{article.link}}">{{article.title}}</a></h1>
-          <div class="article-subtitle">{{article.subtitle}}</div>
-        </header>
-        <div class="detail">
-          {{article.copy}}
-        </div>
-        <div class="published">
-          Published on <a href="{{article.link}}">dev.null</a>, {{article.date}}
-        </div>
-      </article>
+    <div class="row">
+      <div class="col s12 m10 offset-m1">
+        <article>
+          <header>
+            <h1><a href="{{article.link}}">{{article.title}}</a></h1>
+            <div class="article-subtitle">{{article.subtitle}}</div>
+          </header>
+          <div class="article-copy">
+            {{article.copy}}
+          </div>
+          <div class="published">
+            Published on <a href="{{article.link}}">dev.null</a>, {{article.date}}
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
-
-
+  {% endif %}
 {% endfor %}
