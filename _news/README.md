@@ -20,7 +20,7 @@ the file. (See example.html contents.)
 
 Link and copy lines in a news article file are expected; thus HTML will
 be generated for those sections whether these fields do not exist or are
-empty strings. For example, if you leave the link value as an empty string
+empty strings. For example, if you leave the "link" value as an empty string
 then HTML will still be generated for a hyperlink and when the mouse is 
 hovered over the title it will work like a link. But it will just wind up 
 reloading the current page.
