@@ -7,7 +7,7 @@
     "check-html": "html-validator --file=_site/index.html --format=text",
     "test-build": "jekyll build --config=_config_test.yml",
     "remove-script-from-test": "rm -R _site_test/form",
-    "prod-build": "jekyll build --config-_config_prod.yml",
+    "prod-build": "jekyll build --config=_config_prod.yml",
     "remove-script-from-prod": "rm -R _site_prod/form",
     "deploy-test": "rsync -avh --delete _site_test/ uxdev.lib.virginia.edu:/var/www/html/shakespeare",
     "deploy-prod": "rsync -avh --delete _site_prod/ static01.lib.virginia.edu:/lib_content47/shakespeare"
