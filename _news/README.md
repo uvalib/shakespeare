@@ -19,7 +19,7 @@ string value, then no entry is generated on the news page for the content of
 the file. (See example.html contents.)
 
 Link and copy lines in a news article file are expected; thus HTML will
-be generated for those sections whether these fields does not exist or are
+be generated for those sections whether these fields do not exist or are
 empty strings.
 
 Subtitle and published_date are optional; thus they can be missing from the
