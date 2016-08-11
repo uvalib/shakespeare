@@ -9,7 +9,8 @@ To add articles to the News page:
 
 1. Go to the _news folder
 2. View the README.md file and follow the directions in it.
-3. Let the UX team know when you want to have new articles added to the _news folder so that we can push a new build out to the server.
+3. Wait about 15 minutes and review the changes you made on http://uxdev.lib.virginia.edu/shakespeare/ and if they look good...
+4. Let the UX team know that you have new content for production so that we can push a new build out to the server.
 
 ## Developer Information
 
