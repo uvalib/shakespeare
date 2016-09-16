@@ -6,6 +6,11 @@ body {
   background-color: #fafafa;
 }
 
+.body-text {
+  padding-top: 20px;
+  line-height: 32px;
+  font-size: 15px;
+}
 strong {
   font-weight: bold;
 }
@@ -27,7 +32,7 @@ strong {
   width: 100%;
   background-image: url($footer-background-image);
   min-height: 398px;
-  padding: 82px 40px 0px 40px;
+  padding: 82px 40px 20px 40px;
   font-size: 18px;
 }
 
@@ -125,6 +130,7 @@ strong {
 }
 
 .logotype {
+  padding-top: 75px;
   margin-bottom: 30px;
 }
 
@@ -185,9 +191,12 @@ strong {
   color: #d1d1d1;
 }
 
+.folio-card__title {
+  padding-left: 15px;
+}
 // First Folio tour card overrides
 .first-folio-tour {
-  padding-top: 79px;
+  padding-top: 15px;
   padding-bottom: 79px;
 }
 
@@ -333,15 +342,28 @@ textarea.materialize-textarea {
 
 // Links
 a {
-  color: $white-color;
+  color: blue;
   text-decoration: underline;
+}
 
-  &:visited {
+.top-bar {
+  a {
     color: $white-color;
+    text-decoration: none;
   }
+}
 
-  &:hover {
+footer {
+  a {
     color: $white-color;
+
+    &:visited {
+      color: $white-color;
+    }
+
+    &:hover {
+      color: $white-color;
+    }
   }
 }
 
