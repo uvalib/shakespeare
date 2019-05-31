@@ -1,3 +1,5 @@
+This exhibition has passed. The site is no longer maintained. Hence the reason for archiving this repository. 
+
 # shakespeare
 Shakespeare By The Book site
 
